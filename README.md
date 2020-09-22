@@ -1,2 +1,4 @@
 # config_file_setUp
-A basic implementation of how to manipulate data from a config file
+Interactive implementation of a parsed of a config.txt file 
+
+![](https://j.gifs.com/q71KBD.gif)
