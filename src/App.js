@@ -5,8 +5,8 @@ import axios from 'axios';
 
 function App() {
   const [data, setData] = useState({});
-  const [atribute, setAtribute] = useState("")
-  const [key, setKey] = useState("host")
+  const [atribute, setAtribute] = useState("");
+  const [key, setKey] = useState("host");
 
 
   useEffect(() => {
@@ -15,7 +15,7 @@ function App() {
         'http://localhost:4000/file',
       )
       const obj = result.data
-    setAtribute(obj["host"])
+    setAtribute(obj["host"]);
     return setData(obj);
   }
     fetchData();
