@@ -2,7 +2,7 @@ const fs = require('fs');
 var express = require('express'); 
 const app = express();
 var cors = require('cors');
-app.use(cors()) 
+app.use(cors());
 
 const port = 4000;
 
@@ -25,10 +25,10 @@ app.get('/file', (req, res, next) => {
         for (let i = 0; i < match.length; i++) {
           var clean = match[i].replace(regexSpace,'').replace(regexQuotes,'');
           var pre = clean.split('=');
-          if (pre[1].includes("on") || pre[1].includes("yes")) {
+          if (pre[1] === "on" || pre[1] === "yes") {
             obj[pre[0]] = "true";
           } 
-         else if (pre[1].includes("off") || pre[1].includes("no")) {
+         else if (pre[1] === "off" || pre[1] === "no") {
             obj[pre[0]] = "false";
         } else {
           obj[pre[0]] = pre[1];

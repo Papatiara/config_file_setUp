@@ -29,7 +29,7 @@ const getElement = (e) => {
     <div className="App">
       <header className="App-header">
         <h1>CONFIG PARSER</h1>
-        <label for="config">Pick a key value</label>
+        <label htmlFor="config">Pick a key value</label>
         <select onChange={getElement}name="config" id="config">
           {Object.keys(data).map((el, i) =>
             <option key={i} value={el}>{el}</option>
